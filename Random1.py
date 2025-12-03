@@ -712,11 +712,8 @@ class AIPlayer(Player):
     #
     # 
     #
-    def registerWin(self, hasWon, winReason=None):
-        if hasWon:
-            print(f"Random1 player won! Reason: {winReason}")
-        else:
-            print(f"Random1 player lost. Opponent won by: {winReason}")
+    def registerWin(self, hasWon):
+
         
         # Final TD update for the terminal transition
         terminal_reward = 1.0 if hasWon else -1.0
